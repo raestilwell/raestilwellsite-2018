@@ -1,0 +1,360 @@
+/*
+Theme Name: Rae Stilwell Site
+Author: the WordPress team
+Description: A personal site design showcasing my abilities as a developer and designer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: raestilwell
+*/
+/* === CSS Directory ===
+| 1. =SASS Variables
+| 2. =Font Import
+| 3. =Global Settings
+| 4. =Primary Layout
+|	4.1 =Body
+|		4.1.1 =Sticky Footer
+|	4.2 =Text Settings
+| 5. =Secondary Layout
+|	5.1 =Nav
+|	5.2 =Footer
+|	5.3 =Sidebar
+| 6. =General Styles
+|	6.1 =Buttons
+|		6.1.1 =Homepage Social Icons
+|		6.1.2 =Footer Social Icons
+| 7. =Page Specific
+|	7.1 =Home Page
+|	7.2 =Gallery Page
+| 8. =Media Queries
+/* ====================*/
+/* === SASS Variables === */
+/* === Font Import === */
+@font-face {
+  font-family: "Attentica";
+  src: url(../fonts/attentica.ttf); }
+/* === GLobal Setting === */
+html {
+  position: relative;
+  min-height: 100%; }
+
+/* === Primary Layout === */
+/* =Body= */
+body {
+  font-family: "Open-sans", sans-serif;
+  font-weight: lighter; }
+
+/* Stick Footers */
+body#illustration-gallery {
+  margin-bottom: 250px; }
+
+/* =Text Settings= */
+h1, h2, h3, h4, h5 {
+  font-weight: 100; }
+
+/* === Secondary Layout === */
+/* =Nav= */
+.nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100px;
+  line-height: 100px;
+  transition: all ease .3s; }
+
+.nav img {
+  margin-top: -15px;
+  width: 70px; }
+
+.nav-text {
+  font-family: "Attentica", sans-serif;
+  color: #b7b7b7;
+  font-size: 1.7em;
+  transition: all ease .3s; }
+  .nav-text:hover {
+    color: #00b19f; }
+
+.project-text {
+  color: #fa2f00; }
+  .project-text:hover {
+    color: #b62200; }
+
+.text-scroll {
+  color: #6c6c6c; }
+  .text-scroll.project-text {
+    color: #fa2f00; }
+    .text-scroll.project-text:hover {
+      color: #b62200; }
+
+/* =Footer= */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background-color: #282828;
+  overflow: hidden; }
+  .footer h3 {
+    color: #fff;
+    font-family: "Attentica", sans-serif;
+    letter-spacing: 2px; }
+
+.main-footer {
+  height: 200px;
+  padding-top: 15px;
+  box-shadow: 0 5px 10px -5px #000 inset;
+  color: #b7b7b7; }
+
+.social-footer {
+  background-color: #00b19f;
+  height: 50px;
+  line-height: 50px;
+  color: #00524a; }
+
+.footer-nav .f-nav-right {
+  margin-left: -30px; }
+.footer-nav ul {
+  list-style-type: none;
+  margin-left: -40px; }
+.footer-nav a {
+  color: #00b19f;
+  transition: all ease .3s; }
+  .footer-nav a:hover {
+    text-decoration: none;
+    color: #02d8c2; }
+  .footer-nav a .fa {
+    transition: all ease .3s; }
+
+.footer-resume-link {
+  color: #00b19f;
+  transition: all ease .3s; }
+  .footer-resume-link:hover {
+    text-decoration: none;
+    color: #02d8c2; }
+  .footer-resume-link .fa {
+    transition: all ease .3s; }
+
+.footer-nav a:hover .fa, .footer-resume-link:hover .fa {
+  padding-left: 5px; }
+
+/* =Sidebar= */
+/* === General Styles === */
+/* =Buttons= */
+.red-btn, .blue-btn {
+  color: #fff;
+  min-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.5em;
+  transition: all ease .3s; }
+  .red-btn:hover, .blue-btn:hover {
+    color: #fff; }
+
+.red-btn {
+  background-color: rgba(250, 47, 0, 0.4); }
+  .red-btn:hover {
+    box-shadow: 0 5px 10px #801800;
+    text-shadow: 0 3px 10px #801800; }
+
+.blue-btn {
+  background-color: rgba(0, 177, 158, 0.4); }
+  .blue-btn:hover {
+    box-shadow: 0 5px 10px #00524a;
+    text-shadow: 0 3px 10px #00524a; }
+
+.footer-red-btn {
+  margin-top: 40px;
+  background-color: #db2900;
+  color: #fff;
+  transition: all ease .4s; }
+  .footer-red-btn:hover {
+    background-color: #b62200;
+    color: #fff; }
+
+.footer-grey-btn {
+  margin-top: 10px;
+  background-color: #464646;
+  color: #fff;
+  transition: all ease .4s; }
+  .footer-grey-btn:hover {
+    background-color: #000;
+    color: #fff; }
+
+/* Homepage Social Icons */
+.home-social .fa-stack .fa {
+  margin-top: 15px;
+  color: #fa2f00;
+  transition: all ease .4s; }
+
+.home-social .fa-stack .fa-circle-thin,
+.home-social .fa-stack .fa-circle {
+  color: #fff; }
+
+.home-social .fa-stack:hover .fa-circle {
+  transform: scale(0); }
+
+.home-social .fa-stack:hover .fa-facebook,
+.home-social .fa-stack:hover .fa-twitter,
+.home-social .fa-stack:hover .fa-instagram,
+.home-social .fa-stack:hover .fa-behance,
+.home-social .fa-stack:hover .fa-github {
+  color: #fff; }
+
+/* Footer Social Icons */
+.social .fa-stack .fa {
+  color: #00524a;
+  transition: all ease .3s; }
+
+.social .fa-stack .fa-circle {
+  color: #fff;
+  transform: scale(0); }
+
+.social .fa-stack:hover .fa-circle {
+  transform: scale(1); }
+
+.social .fa-stack:hover .fa-circle-thin {
+  opacity: 0; }
+
+.social .fa-stack:hover .fa-facebook,
+.social .fa-stack:hover .fa-twitter,
+.social .fa-stack:hover .fa-instagram,
+.social .fa-stack:hover .fa-behance,
+.social .fa-stack:hover .fa-github {
+  color: #00b19f; }
+
+/* === Page Specific === */
+/* =Home Page= */
+#home-section {
+  text-align: center;
+  font-family: "Attentica", sans-serif; }
+  #home-section h1 {
+    color: #00b19f;
+    font-size: 10em;
+    position: relative; }
+  #home-section h2 {
+    color: #b7b7b7;
+    position: relative;
+    font-size: 5em;
+    margin-bottom: -90vh; }
+
+#about-section {
+  background-color: #00b19f;
+  background-image: url(../img/about-bg.jpg);
+  background-size: cover;
+  color: #fff;
+  padding-left: 50px; }
+  #about-section .resume-link {
+    padding: 3px 0;
+    position: relative;
+    text-decoration: none;
+    color: white; }
+    #about-section .resume-link:before {
+      content: '';
+      border-bottom: solid 1px white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%; }
+    #about-section .resume-link:hover:before {
+      transform: scaleY(4);
+      width: 100%;
+      border-bottom: solid thin #fa2f00; }
+    #about-section .resume-link:before {
+      transition: all ease .3s; }
+  #about-section .boldest {
+    font-weight: 900; }
+
+#work-section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.work-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 100%;
+  background-color: blue; }
+
+.design-cont, .dev-cont {
+  flex: 1;
+  text-align: center;
+  transition: .3s;
+  max-width: 50%;
+  padding: 8em 0;
+  background-color: #ccc;
+  min-width: 5%; }
+  .design-cont:hover, .dev-cont:hover {
+    transition: .5s;
+    max-width: 95% !important;
+    background: #333;
+    flex-grow: 10;
+    color: #fff; }
+
+.design-cont {
+  border-right: 5px solid #fff;
+  padding-top: 275px; }
+
+.dev-cont {
+  border-left: 5px solid #fff;
+  padding-top: 275px; }
+
+#contact-section {
+  background-color: #00b19f;
+  background-image: url(../img/contact-bg.jpg);
+  background-size: cover;
+  color: #fff;
+  text-align: center; }
+  #contact-section h2 {
+    font-family: "Attentica", sans-serif;
+    font-size: 8em; }
+  #contact-section .blue-btn {
+    background-color: rgba(0, 177, 158, 0.8); }
+    #contact-section .blue-btn:hover {
+      box-shadow: 0 5px 10px #801800; }
+  #contact-section .social {
+    margin-top: 20px; }
+
+/* =Gallery Page= */
+body#illustration-gallery, body#gallery-detail {
+  margin-top: 130px; }
+  body#illustration-gallery h1, body#gallery-detail h1 {
+    color: #00b19f;
+    font-family: "Attentica", sans-serif;
+    font-size: 5em; }
+  body#illustration-gallery h2, body#gallery-detail h2 {
+    font-family: "Attentica", sans-serif;
+    font-size: 3em;
+    padding-top: 10px;
+    margin-bottom: -10px; }
+
+.gallery > .row .col {
+  padding: 10px; }
+
+.gal-img {
+  border-radius: 50%;
+  transition: all ease 1s; }
+
+.grayscale-gallery {
+  transition: all ease 1s;
+  -webkit-filter: grayscale(70%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%); }
+
+.gallery {
+  padding-bottom: 20px; }
+
+.gallery-detail {
+  margin-bottom: 20px; }
+
+a.back-gal-link, .fa {
+  color: #00b19f;
+  transition: all ease .3s; }
+  a.back-gal-link:hover, .fa:hover {
+    color: #00998a;
+    text-decoration: none; }
+
+a.back-gal-link:hover .fa {
+  color: #00998a;
+  padding-right: 5px; }
+
+/*# sourceMappingURL=style.css.map */

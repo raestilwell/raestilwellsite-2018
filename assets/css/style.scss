@@ -1,0 +1,477 @@
+/*
+Theme Name: Rae Stilwell Site
+Author: the WordPress team
+Description: A personal site design showcasing my abilities as a developer and designer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: raestilwell
+*/
+
+/* === CSS Directory ===
+| 1. =SASS Variables
+| 2. =Font Import
+| 3. =Global Settings
+| 4. =Primary Layout
+|	4.1 =Body
+|		4.1.1 =Sticky Footer
+|	4.2 =Text Settings
+| 5. =Secondary Layout
+|	5.1 =Nav
+|	5.2 =Footer
+|	5.3 =Sidebar
+| 6. =General Styles
+|	6.1 =Buttons
+|		6.1.1 =Homepage Social Icons
+|		6.1.2 =Footer Social Icons
+| 7. =Page Specific
+|	7.1 =Home Page
+|	7.2 =Gallery Page
+| 8. =Media Queries
+/* ====================*/
+
+/* === SASS Variables === */
+
+$sans-serif: 'Open-sans', sans-serif;
+$attentica: 'Attentica', sans-serif;
+
+$light-blue: #02d8c2;
+$blue: #00b19f;
+$dark-blue: #00998a;
+$darkest-blue: #00524a;
+$lightest-grey: #d0d0d0;
+$light-grey: #b7b7b7;
+$grey: #6c6c6c;
+$dark-grey: #464646;
+$darkest-grey: #282828;
+$red: #fa2f00;
+$med-red: #db2900;
+$dark-red: #b62200;
+$darkest-red: #801800;
+
+/* === Font Import === */
+@font-face {font-family: "Attentica";
+	src: url(../fonts/attentica.ttf);
+}
+
+/* === GLobal Setting === */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+/* === Primary Layout === */
+
+/* =Body= */
+body{
+	font-family: $sans-serif;
+	font-weight: lighter;
+}
+
+/* Stick Footers */
+body#illustration-gallery{
+	margin-bottom: 250px;
+}
+
+/* =Text Settings= */
+h1, h2, h3, h4, h5{
+	font-weight: 100;
+}
+
+/* === Secondary Layout === */
+
+/* =Nav= */
+
+.nav {
+	background-color: rgba(255,255,255,.8);
+	height: 100px;
+	line-height: 100px;
+	transition: all ease .3s;
+	
+}
+
+.nav img {
+	margin-top: -15px;
+	width: 70px;
+}
+
+.nav-text{
+	font-family: $attentica;
+	color: $light-grey;
+	font-size: 1.7em;
+	transition: all ease .3s;
+
+	&:hover{
+		color: $blue;
+	}
+}
+
+.project-text {
+	color: $red;
+	 	&:hover{
+		 color: $dark-red;
+	 }
+}
+
+.text-scroll{
+	color: $grey;
+		&.project-text{
+			color: $red;
+				&:hover{
+					 color: $dark-red;
+				 }
+		}
+}
+
+/* =Footer= */
+
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	background-color: $darkest-grey;
+	overflow: hidden;
+	
+	& h3{
+		color: #fff;
+		font-family: $attentica;
+		letter-spacing: 2px;
+	}
+	
+}
+
+.main-footer{
+	height: 200px;
+	padding-top: 15px;
+	box-shadow: 0 5px 10px -5px #000 inset;
+	color: $light-grey;
+}
+
+.social-footer{
+	background-color: $blue;
+	height: 50px;
+	line-height: 50px;
+	color: $darkest-blue;
+}
+
+.footer-nav {
+	
+	& .f-nav-right{
+		margin-left: -30px;
+	}
+	& ul{ 
+		list-style-type: none; 
+		margin-left: -40px;
+		}
+	
+	& a{
+		color: $blue;
+		transition: all ease .3s;
+			&:hover{
+				text-decoration: none;
+				color: $light-blue;
+			}
+			
+		& .fa {transition: all ease .3s;}
+	}
+}
+
+.footer-resume-link{
+	color: $blue;
+	transition: all ease .3s;
+			&:hover{
+				text-decoration: none;
+				color: $light-blue;
+			}
+			
+		& .fa {transition: all ease .3s;}
+	}
+
+.footer-nav a:hover .fa, .footer-resume-link:hover .fa {
+	padding-left: 5px;
+}
+
+/* =Sidebar= */
+
+/* === General Styles === */
+
+/* =Buttons= */
+
+.red-btn, .blue-btn{
+	color: #fff;
+	min-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 1.5em;
+	transition: all ease .3s;
+	
+	&:hover{
+		color: #fff;
+	}
+}
+
+.red-btn{
+	background-color: rgba(250,47,0,.4);
+	
+	&:hover{
+		box-shadow: 0 5px 10px $darkest-red;
+		text-shadow: 0 3px 10px $darkest-red;
+	}	
+	
+}
+
+.blue-btn{
+	background-color: rgba(0,177,158,.4);
+	
+	&:hover{
+		box-shadow: 0 5px 10px $darkest-blue;
+		text-shadow: 0 3px 10px $darkest-blue;		
+	}
+}
+
+.footer-red-btn{
+	margin-top: 40px;
+	background-color: $med-red;
+	color: #fff;
+	transition: all ease .4s;
+		&:hover{
+			background-color: $dark-red;
+			color: #fff;
+		}
+}
+
+.footer-grey-btn{
+	margin-top: 10px;
+	background-color: $dark-grey;
+	color: #fff;
+	transition: all ease .4s;
+		&:hover{
+			background-color: #000;
+			color: #fff;
+		}
+}
+
+/* Homepage Social Icons */
+
+.home-social .fa-stack .fa{
+	margin-top: 15px;
+	color: $red;
+	transition: all ease .4s;
+}
+.home-social .fa-stack .fa-circle-thin,
+.home-social .fa-stack .fa-circle{color: #fff;}
+
+.home-social .fa-stack:hover .fa-circle{transform: scale(0);}
+.home-social .fa-stack:hover .fa-facebook,
+.home-social .fa-stack:hover .fa-twitter,
+.home-social .fa-stack:hover .fa-instagram,
+.home-social .fa-stack:hover .fa-behance,
+.home-social .fa-stack:hover .fa-github{color: #fff;}
+
+
+/* Footer Social Icons */
+.social .fa-stack .fa{
+	color: $darkest-blue;
+	transition: all ease .3s;
+}
+.social .fa-stack .fa-circle{color: #fff; transform: scale(0);}
+
+.social .fa-stack:hover .fa-circle{transform: scale(1);}
+.social .fa-stack:hover .fa-circle-thin {opacity: 0;}
+.social .fa-stack:hover .fa-facebook,
+.social .fa-stack:hover .fa-twitter,
+.social .fa-stack:hover .fa-instagram,
+.social .fa-stack:hover .fa-behance,
+.social .fa-stack:hover .fa-github{color: $blue;}
+
+/* === Page Specific === */
+
+/* =Home Page= */
+
+#home-section{
+	text-align: center;
+	font-family: $attentica;
+	
+	h1{
+		color: $blue;
+		font-size: 10em;
+		position: relative;
+		
+	}
+	
+	h2{
+		color: $light-grey;
+		position: relative;
+		font-size: 5em;
+		margin-bottom: -90vh;
+	}
+}
+
+#about-section{
+	background-color: $blue;
+	background-image: url(../img/about-bg.jpg);
+	background-size: cover;
+	color: #fff;
+	padding-left: 50px;
+	
+	.resume-link {
+		padding: 3px 0;
+		position: relative;
+		text-decoration: none;
+		color: white;
+						
+			&:before{
+				content: '';
+				border-bottom: solid 1px white;
+				position: absolute;
+				bottom: 0; left: 0;
+				width: 100%;
+			}
+		 
+			&:hover:before{
+				transform:  scaleY(4);
+				width: 100%;
+				border-bottom: solid thin $red;
+			}
+		
+			&:before{
+				transition: all ease .3s;
+			}		
+
+	}
+	
+	.boldest{
+		font-weight: 900;
+		}
+}
+
+#work-section{
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+
+.work-container{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		height: 100%;
+		background-color: blue;		
+}
+		
+.design-cont, .dev-cont{
+	flex: 1;
+	text-align: center;
+	transition: .3s;
+	max-width: 50%;
+	padding: 8em 0;
+	background-color: #ccc;
+	min-width: 5%;
+			
+		&:hover{
+			 transition: .5s;
+			 max-width: 95% !important;
+			 background: #333;
+			 flex-grow: 10;
+			 color: #fff;
+		}
+}
+
+.design-cont {
+	border-right: 5px solid #fff;
+	padding-top: 275px;
+}
+
+.dev-cont {
+	border-left: 5px solid #fff;
+	padding-top: 275px;
+}
+
+
+#contact-section{
+	background-color: $blue;
+	background-image: url(../img/contact-bg.jpg);
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	
+	h2 {
+		font-family: $attentica;
+		font-size: 8em;
+	}
+	
+	.blue-btn{
+		background-color: rgba(0,177,158,.8);
+		
+		&:hover{
+			box-shadow: 0 5px 10px $darkest-red;
+		}
+	}
+		
+	.social {
+		margin-top: 20px;
+	}
+
+	
+}
+
+/* =Gallery Page= */
+
+body#illustration-gallery, body#gallery-detail{
+	margin-top: 130px;
+	
+	& h1{
+		color: $blue;
+		font-family: $attentica;
+		font-size: 5em;
+	}
+	
+	& h2 {
+		font-family: $attentica;
+		font-size: 3em;
+		padding-top: 10px;
+		margin-bottom: -10px;
+	}
+	
+}
+
+.gallery > .row .col {
+	padding: 10px;
+}
+
+.gal-img {
+	border-radius: 50%;
+	transition: all ease 1s;
+}
+
+.grayscale-gallery{
+	transition: all ease 1s;
+	-webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
+}
+
+.gallery{
+	padding-bottom: 20px;
+}
+
+.gallery-detail {
+	margin-bottom: 20px;
+}
+
+a.back-gal-link, .fa{
+	color: $blue;
+	transition: all ease .3s;
+	
+		&:hover{
+			color: $dark-blue;
+			text-decoration: none;
+		}
+	
+}
+
+a.back-gal-link:hover .fa{
+	color: $dark-blue;
+	padding-right: 5px;
+}
